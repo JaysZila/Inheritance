@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Inheritance">
+  <ClassDiagramComponents>
+    <Class name="Fuel" package="Fuel.model" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="nameOfFuel" type="String" visibility="private"/>
+        <Field name="stateOfFuel" type="String" visibility="private"/>
+        <Field name="price" type="double" visibility="private"/>
+        <Field name="payment" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameOfFuel"/>
+          <Argument type="String" name="stateOfFuel"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameOfFuel"/>
+          <Argument type="String" name="stateOfFuel"/>
+          <Argument type="double" name="price"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNameOfFuel" returnType="String" visibility="public"/>
+        <Method name="setNameOfFuel" returnType="void" visibility="public">
+          <Argument type="String" name="nameOfFuel"/>
+        </Method>
+        <Method name="getStateOfFuel" returnType="String" visibility="public"/>
+        <Method name="setStateOfFuel" returnType="void" visibility="public">
+          <Argument type="String" name="stateOfFuel"/>
+        </Method>
+        <Method name="getPrice" returnType="double" visibility="public"/>
+        <Method name="setPrice" returnType="void" visibility="public">
+          <Argument type="double" name="price"/>
+        </Method>
+        <Method name="getPayment" returnType="double" visibility="public"/>
+        <Method name="paymentOfFuel" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Gas" package="Fuel.model" visibility="public" xPosition="562.0" yPosition="42.0">
+      <Fields>
+        <Field name="pressure" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameOfFuel"/>
+          <Argument type="String" name="stateOfFuel"/>
+          <Argument type="double" name="price"/>
+          <Argument type="double" name="pressure"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPressure" returnType="double" visibility="public"/>
+        <Method name="setPressure" returnType="void" visibility="public">
+          <Argument type="double" name="pressure"/>
+        </Method>
+        <Method name="paymentOfFuel" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Oil" package="Fuel.model" visibility="public" xPosition="562.0" yPosition="314.0">
+      <Fields>
+        <Field name="color" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nameOfFuel"/>
+          <Argument type="String" name="stateOfFuel"/>
+          <Argument type="double" name="price"/>
+          <Argument type="String" name="color"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getColor" returnType="String" visibility="public"/>
+        <Method name="setColor" returnType="void" visibility="public">
+          <Argument type="String" name="color"/>
+        </Method>
+        <Method name="paymentOfFuel" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TestFuel" package="Fuel.view" visibility="public" xPosition="97.0" yPosition="448.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Fuel.model.Gas" target="Fuel.model.Fuel"/>
+    <IsRelation name="is" source="Fuel.model.Oil" target="Fuel.model.Fuel"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
